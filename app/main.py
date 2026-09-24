@@ -1,7 +1,12 @@
-def main():
-    # write your code here
-    pass
+user = input("Enter name of the file: ")
+filename = user + ".txt"
 
+lista = []
+while True:
+    user2 = input("Enter new line of content: ")
+    if user2 == "stop":
+        break
+    lista.append(user2 + "\n")
 
-if __name__ == "__main__":
-    main()
+with open(filename, "a") as file:
+    file.writelines(lista)
