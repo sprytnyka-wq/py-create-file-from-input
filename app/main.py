@@ -8,5 +8,5 @@ while True:
         break
     lista.append(user2 + "\n")
 
-with open(filename, "a") as file:
+with open(filename, "w") as file:
     file.writelines(lista)
